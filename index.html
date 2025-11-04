@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiraAi</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" onclick="startNewChat()">
+                    <i class="fa-solid fa-plus"></i> New Chat
+                </button>
+            </div>
+            <div class="chat-history-title">Recent</div>
+            <div class="chat-list" id="chatList"></div>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="fa-solid fa-gear"></i> Settings
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header"> <div class="header-title">MiraAI</div> </div>
+            <div class="chat-container" id="chatContainer"></div>
+            <div class="input-section">
+                <div class="input-container">
+                    <input type="file" id="fileInput" hidden onchange="handleFileUpload(event)">
+                    <input type="text" class="input-field" id="userInput" placeholder="Message Gemini..." onkeypress="handleKeyPress(event)">
+                    <button class="icon-btn" title="Attach file" onclick="document.getElementById('fileInput').click()">
+                        <i class="fa-solid fa-paperclip"></i>
+                    </button>
+                    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
