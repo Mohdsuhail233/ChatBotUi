@@ -9,7 +9,7 @@ let loadingMessageElement = null;
 // ✅ Connect WebSocket (for text chat)
 function connectWebSocket() {
     try {
-        ws = new WebSocket('ws://18.170.50.123:8080/chat');
+        ws = new WebSocket('wss://allowance-nations-italiano-hamilton.trycloudflare.com/chat');
         ws.onopen = () => {
             console.log('✅ WebSocket connected');
             isConnected = true;
