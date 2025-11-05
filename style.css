@@ -93,3 +93,120 @@
   align-self: flex-start; /* ✅ bot message left side */
   border-bottom-left-radius: 0;
 }
+
+
+/* =============================
+   📱 Responsive Design Section
+   ============================= */
+
+/* Tablet (≤992px) */
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .chat-history-title,
+  .chat-list,
+  .sidebar-footer {
+    display: none;
+  }
+
+  .new-chat-btn {
+    flex-grow: 0;
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  .main-content {
+    flex: 1;
+    height: calc(100vh - 60px);
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  .chat-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .input-section {
+    padding: 15px;
+  }
+
+  .message-content {
+    font-size: 15px;
+  }
+}
+
+/* Mobile (≤600px) */
+@media screen and (max-width: 600px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar-header {
+    justify-content: center;
+  }
+
+  .new-chat-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .main-content {
+    height: auto;
+  }
+
+  .chat-container {
+    padding: 10px;
+  }
+
+  .message {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  .message-content {
+    padding: 10px 14px;
+    border-radius: 16px;
+  }
+
+  .input-section {
+    padding: 10px;
+  }
+
+  .input-container {
+    flex-direction: row;
+    padding: 8px 10px;
+    border-radius: 22px;
+  }
+
+  .input-field {
+    font-size: 14px;
+  }
+
+  .icon-btn,
+  .send-btn {
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .message-content img {
+    max-width: 100%;
+  }
+}
