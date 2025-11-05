@@ -9,7 +9,7 @@ let loadingMessageElement = null;
 // ✅ Connect WebSocket (for text chat)
 function connectWebSocket() {
     try {
-        ws = new WebSocket('wss://jill-cornwall-february-ate.trycloudflare.com/chat');
+        ws = new WebSocket('wss://studios-cosmetics-stocks-investing.trycloudflare.com/chat');
         ws.onopen = () => {
             console.log('✅ WebSocket connected');
             isConnected = true;
