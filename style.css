@@ -96,13 +96,14 @@
 
 
 /* =============================
-   📱 Responsive Design Section
+   📱 Simple Stable Responsive Design
    ============================= */
 
 /* Tablet (≤992px) */
 @media screen and (max-width: 992px) {
   .container {
     flex-direction: column;
+    height: auto;
   }
 
   .sidebar {
@@ -112,6 +113,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
+    border-bottom: 1px solid #3c4043;
   }
 
   .chat-history-title,
@@ -121,18 +123,13 @@
   }
 
   .new-chat-btn {
-    flex-grow: 0;
     font-size: 13px;
-    padding: 8px 14px;
+    padding: 8px 12px;
   }
 
   .main-content {
     flex: 1;
     height: calc(100vh - 60px);
-  }
-
-  .header-title {
-    font-size: 18px;
   }
 
   .chat-container {
@@ -144,22 +141,35 @@
     padding: 15px;
   }
 
-  .message-content {
-    font-size: 15px;
+  .header-title {
+    font-size: 18px;
   }
 }
 
 /* Mobile (≤600px) */
 @media screen and (max-width: 600px) {
-  .sidebar {
+  body {
+    overflow: auto;
+  }
+
+  .container {
     flex-direction: column;
-    align-items: stretch;
+    height: auto;
+  }
+
+  .sidebar {
     width: 100%;
-    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #3c4043;
   }
 
   .sidebar-header {
+    width: 100%;
     justify-content: center;
+    margin-bottom: 10px;
   }
 
   .new-chat-btn {
@@ -167,12 +177,21 @@
     font-size: 14px;
   }
 
+  .chat-history-title,
+  .chat-list,
+  .sidebar-footer {
+    display: none;
+  }
+
   .main-content {
+    width: 100%;
+    flex: 1;
     height: auto;
   }
 
   .chat-container {
-    padding: 10px;
+    padding: 12px;
+    width: 100%;
   }
 
   .message {
@@ -182,7 +201,6 @@
 
   .message-content {
     padding: 10px 14px;
-    border-radius: 16px;
   }
 
   .input-section {
@@ -190,9 +208,8 @@
   }
 
   .input-container {
-    flex-direction: row;
     padding: 8px 10px;
-    border-radius: 22px;
+    border-radius: 20px;
   }
 
   .input-field {
@@ -210,3 +227,4 @@
     max-width: 100%;
   }
 }
+
